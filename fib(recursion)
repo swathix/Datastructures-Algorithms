@@ -1,0 +1,19 @@
+
+     
+     public class fib {
+ 
+    public static void main(String args[]){
+        int n=0;
+        while(true)
+        System.out.println(fiba(n));
+        n++;
+    }
+         
+        public static int fiba(int n)
+        {
+            if(n<=1)
+            return n;
+            else
+                return fiba(n-1) + fiba(n -2);
+      }
+}
