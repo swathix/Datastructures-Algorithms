@@ -1,0 +1,114 @@
+
+Inorder(l, root, r)
+
+1.Take a tree has root , left , right , data.
+2.it should have left subtree , right subtree for the root is binary tree.
+
+ Algorithm
+
+Inorder for the tree. inorder(tree)
+
+1.Traverse the left subtree. inorder(left-subtree). —Finish all the left subtree(Call same recursively)
+2.visit the root.
+3.Traverse the right subtree.  inorder(right-subtree)——Finish all the right  nodes of subtree.
+
+
+Class Node{
+
+Node  left;
+Node right;
+Int data;
+Int key;
+}
+
+node(int item)
+{
+
+key=item;
+left=right=null;
+}
+
+Class tree{
+
+Node root;
+
+Tree()
+{
+root=null;
+}
+
+inorder(node n)
+{
+
+if(n==null)
+Return;
+inorder(n.left);
+system.out.println(n.key);
+inorder(n.right);
+}
+
+
+
+preorder(Root, l, r)
+
+
+1.Visit the root
+2.Traverse the left subtree— preorder(left->subtree)—root->left
+3.Traverse the right subtree —preorder(right->subtree)—root->right
+
+
+
+postorder(l, r, root)
+
+
+1. Traverse the left subtree — postorder(left->subtree)—finish all left(recursively call until it does not have any left )
+2. Traverse the right subtree—postorder(right->subtree)—finish all the right
+3. Visit the node
+
+
+BST— inorder to determine whether the given bt is bst or not
+
+The left tree should have values less than the root, right tree values should be greater than root —If that both condition satisfies then we say it is BST .If it fails to satisfy any one of the condition then it is not bst.
+
+Efficient to avoid the visiting the same nodes again and again
+
+
+1.Take the structure where it has node, left , right, data.
+2. Node has root.
+3. If root is null then return true
+4. Take the function bst which returns true or false of following arguments (Node n, int , min, int max)
+5.  if(n.data<min||n.data>max)—return false
+6.  Call the function recursively to check each nodes of same condition (bst(node.left, min, node.data-1)&& node.right, node.data+1, max)).
+7. If it returns true then we can say it is bst or not 
+
+
+
+
+Height of binary tree
+
+The height is calculated as the depth of the node from root to the farthest node .In between those how many edges are calculated is known as height of the tree.
+
+Algorithm
+
+1.If the node is null return 0.
+2.Now calculate the height of the left subtree left—height(node->left)
+3.And calculate the height of right subtree right-height(node->right)
+4. The height of tree is 1+max(left, right)
+
+
+
+A tree is balanced if left subtree , right subtree is balanced and the diff between the  heights of left subtree and right subtree is not more than 1.
+
+
+Algorithm
+
+1.Check the condition whether node is null if it is null return true.
+2.check left=balanced(node-left)
+3.check right=balanced(node-right)
+4.If that is true.
+5.Calculate the height of left=height(node-left), right ->height(node->right).
+6.calculate the difference of heights of left and right subtree.
+7.It it is not greater than 1 then return true , if not return false.
+
+
+
