@@ -1,0 +1,11 @@
+#!/bin/bash
+Book="book.txt"
+echo -n  "Enter the line  to delete"
+read number
+
+mv $Book boo.txt
+
+nl --number-seperator=":" boo.txt | grep -v $number: | awk -F: '{print $2}' |tee $Book 
+
+
+i saw how and what they wrote and tried to get from those and execute it.
