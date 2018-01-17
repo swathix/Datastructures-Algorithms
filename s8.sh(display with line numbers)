@@ -1,0 +1,9 @@
+#!/bin/bash
+  
+book="book.txt"
+
+echo "Line number: Name ; phone number"
+
+#giving line numbers
+
+nl  --number-separator=":  "$book |less
