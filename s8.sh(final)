@@ -1,0 +1,293 @@
+Last login: Sat Jan 13 21:33:58 on ttys000
+Swathis-MacBook-Pro:~ swathinekkalapudi$ brew tap InstantClientTap/instantclient
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/core, caskroom/versions, caskroom/cask).
+==> Updated Formulae
+jenkins ✔           get_iplayer         pre-commit          unixodbc
+astyle              gobuster            presto              verilator
+autogen             khard               qpdf                whohas
+backupninja         kubeless            scummvm             wiggle
+bash-preexec        lz4                 scummvm-tools       wwwoffle
+ccache              mdp                 solr                xvid
+cppcheck            mikutter            sslsplit            yaze-ag
+dehydrated          mksh                tin                 zabbix
+ditaa               mycli               tnef                zimg
+docker-gen          node-build          tokei
+duplicity           ola                 ttf2eot
+get-flash-videos    ponyc               txr
+
+==> Tapping instantclienttap/instantclient
+Cloning into '/usr/local/Homebrew/Library/Taps/instantclienttap/homebrew-instantclient'...
+remote: Counting objects: 16, done.
+remote: Compressing objects: 100% (12/12), done.
+remote: Total 16 (delta 7), reused 8 (delta 3), pack-reused 0
+Unpacking objects: 100% (16/16), done.
+Tapped 8 formulae (50 files, 42.8KB)
+Swathis-MacBook-Pro:~ swathinekkalapudi$ brew install instantclient-basic
+==> Installing instantclient-basic from instantclienttap/instantclient
+Error: The following file can not be downloaded automatically:
+  http://download.oracle.com/otn/mac/instantclient/122010/instantclient-basic-macos.x64-12.2.0.1.0.zip
+
+Please download it to the homebrew cache directory:
+  /Users/swathinekkalapudi/Library/Caches/Homebrew
+
+Creating a symlink also works:
+  ln -sf /path/to/downloaded/instantclient-basic-macos.x64-12.2.0.1.0.zip /Users/swathinekkalapudi/Library/Caches/Homebrew/
+Swathis-MacBook-Pro:~ swathinekkalapudi$ brew install oracle
+Error: No available formula with the name "oracle" 
+==> Searching for a previously deleted formula (in the last month)...
+Warning: homebrew/core is shallow clone. To get complete history run:
+  git -C "$(brew --repo homebrew/core)" fetch --unshallow
+
+Error: No previously deleted formula found.
+==> Searching for similarly named formulae...
+==> Searching local taps...
+Error: No similarly named formulae found.
+==> Searching taps...
+==> Searching taps on GitHub...
+Error: No formulae found in taps.
+Swathis-MacBook-Pro:~ swathinekkalapudi$ ps -ef|grep tns
+  501 12462  8963   0  7:26PM ttys000    0:00.01 grep tns
+Swathis-MacBook-Pro:~ swathinekkalapudi$ telnet hostname portnumber
+-bash: telnet: command not found
+Swathis-MacBook-Pro:~ swathinekkalapudi$ ping hostname portnumber
+usage: ping [-AaDdfnoQqRrv] [-c count] [-G sweepmaxsize]
+            [-g sweepminsize] [-h sweepincrsize] [-i wait]
+            [-l preload] [-M mask | time] [-m ttl] [-p pattern]
+            [-S src_addr] [-s packetsize] [-t timeout][-W waittime]
+            [-z tos] host
+       ping [-AaDdfLnoQqRrv] [-c count] [-I iface] [-i wait]
+            [-l preload] [-M mask | time] [-m ttl] [-p pattern] [-S src_addr]
+            [-s packetsize] [-T ttl] [-t timeout] [-W waittime]
+            [-z tos] mcast-group
+Apple specific options (to be specified before mcast-group or host like all options)
+            -b boundif           # bind the socket to the interface
+            -k traffic_class     # set traffic class socket option
+            -K net_service_type  # set traffic class socket options
+            -apple-connect       # call connect(2) in the socket
+            -apple-time          # display current time
+Swathis-MacBook-Pro:~ swathinekkalapudi$ cd Desktop
+Swathis-MacBook-Pro:Desktop swathinekkalapudi$ ls
+Cover letter.pages		s4.sh.rtf.sb-94deacf9-tQZlSu
+book.rtf			sample
+s4.sh
+Swathis-MacBook-Pro:Desktop swathinekkalapudi$ ./s4.sh
+-bash: ./s4.sh: Permission denied
+Swathis-MacBook-Pro:Desktop swathinekkalapudi$ sudo su
+Password:
+sh-3.2# ls
+.DS_Store			s4.sh
+.localized			s4.sh.rtf.sb-94deacf9-tQZlSu
+Cover letter.pages		sample
+book.rtf
+sh-3.2# ./s4.sh
+sh: ./s4.sh: Permission denied
+sh-3.2# sh Desktop/s4.sh
+sh: Desktop/s4.sh: No such file or directory
+sh-3.2# sh s4
+sh: s4: No such file or directory
+sh-3.2# sh s4.sh
+-n “Enter name”:
+swathi
+-n “Enter Phone Number”:
+618-303-7450
+-e swathi, 618-303-7450
+-e “y/n: “
+s4.sh: line 12: if[“??==“y”]: command not found
+s4.sh: line 14: Then: command not found
+“swathi
+s4.sh: line 15: $Book: ambiguous redirect
+s4.sh: line 17: syntax error near unexpected token `else'
+s4.sh: line 17: `else'
+sh-3.2# vi s4.sh
+sh-3.2# sh s4.sh
+-n “Enter name”:
+hi
+-n “Enter Phone Number”:
+444444
+-e hi, 444444
+-e “y/n: “
+s4.sh: line 13: if[“??==“y”]: command not found
+s4.sh: line 15: syntax error near unexpected token `then'
+s4.sh: line 15: `then'
+sh-3.2# vi s4.sh
+sh-3.2# sh s4.sh
+-n “Enter name”:
+hki
+-n “Enter Phone Number”:
+555555
+-e hki, 555555
+-e “y/n: “
+n
+s4.sh: line 14: if[“??==“y”]: command not found
+s4.sh: line 16: syntax error near unexpected token `then'
+s4.sh: line 16: `then'
+sh-3.2# vi s4.sh
+sh-3.2# sh s4.sh
+-n “Enter name”:
+swathi
+-n “Enter Phone Number”:
+6183037450
+-e swathi, 6183037450
+-e “y/n: “
+y
+s4.sh: line 14: if[“?? == “y”]: command not found
+s4.sh: line 15: syntax error near unexpected token `then'
+s4.sh: line 15: `then'
+sh-3.2# vi s4.sh
+sh-3.2# sh s4.sh
+-n “Enter name”:
+swathi
+-n “Enter Phone Number”:
+6183037450
+-e swathi, 6183037450
+-n “y/n: “
+y
+s4.sh: line 14: if[“?? == “y”]: command not found
+s4.sh: line 15: syntax error near unexpected token `then'
+s4.sh: line 15: `then'
+sh-3.2# vi s4.sh
+sh-3.2# vi s4.sh
+sh-3.2# vi s4.sh
+sh-3.2# sh s4.sh
+s4.sh: line 3: Desktop/sample/book.txt: No such file or directory
+-n “Enter name”:
+swathi
+-n “Enter Phone Number”:
+6183037450 
+-e swathi, 6183037450
+-n “y/n: “
+y
+s4.sh: line 14: if[“?? == “y”]: command not found
+s4.sh: line 15: syntax error near unexpected token `then'
+s4.sh: line 15: `then'
+sh-3.2# vi s4.sh
+sh-3.2# sh s4.sh
+-n “Enter name”:
+swathi
+-n “Enter Phone Number”:
+6666
+-e swathi, 6666
+-n “y/n: “
+n
+s4.sh: line 14: if[“?? == “y”]: command not found
+s4.sh: line 15: syntax error near unexpected token `then'
+s4.sh: line 15: `then'
+sh-3.2# vi s4.sh
+sh-3.2# sh s4.sh
+-n “Enter name”:
+hi
+-n “Enter Phone Number”:
+888
+-e hi, 888
+-n “y/n: “
+n 
+s4.sh: line 14: [: missing `]'
+“We are not writing to book”
+sh-3.2# vi s4.sh
+sh-3.2# vi book.txt
+sh-3.2# vi s5.sh
+sh-3.2# sh s5.sh
+-n What are u looking for
+swathi
+sh-3.2# echo book.txt
+book.txt
+sh-3.2# vi s6.sh
+sh-3.2# sh s6.sh
+-n Enter the line  to delete
+2
+s6.sh: line 8: n1: command not found
+sh-3.2# vi s6.sh
+sh-3.2# sh s6.sh
+-n Enter the line  to delete
+2
+s6.sh: line 8: n1: command not found
+sh-3.2# vi s6.sh
+sh-3.2# sh s6.sh
+-n Enter the line  to delete
+2
+nl: illegal option -- -
+usage: nl [-p] [-b type] [-d delim] [-f type] [-h type] [-i incr] [-l num]
+          [-n format] [-s sep] [-v startnum] [-w width] [file]
+sh-3.2# vi s6.sh
+sh-3.2# vi s7.sh
+sh-3.2# ./s6.sh
+sh: ./s6.sh: Permission denied
+sh-3.2# sh s6.sh
+-n Enter the line  to delete
+2
+nl: illegal option -- -
+usage: nl [-p] [-b type] [-d delim] [-f type] [-h type] [-i incr] [-l num]
+          [-n format] [-s sep] [-v startnum] [-w width] [file]
+sh-3.2# sh s7.sh
+sh-3.2# 1
+sh: 1: command not found
+sh-3.2# 
+sh-3.2# ls
+.DS_Store		book.txt		s7.sh
+.localized		s4.sh			sample
+Cover letter.pages	s5.sh
+boo.txt			s6.sh
+sh-3.2# vi s4.sh
+sh-3.2# vi s8.sh
+sh-3.2# sh s8.sh
+Line number: Name ; phone number
+nl: illegal option -- -
+usage: nl [-p] [-b type] [-d delim] [-f type] [-h type] [-i incr] [-l num]
+          [-n format] [-s sep] [-v startnum] [-w width] [file]
+sh-3.2# vi s8.sh
+sh-3.2# sh s8.sh
+Line number: Name ; phone number
+s8.sh: line 9: unexpected EOF while looking for matching `"'
+s8.sh: line 10: syntax error: unexpected end of file
+sh-3.2# vi s8.sh
+sh-3.2# sh s8.sh
+Line number: Name ; phone number
+nl: illegal option -- -
+usage: nl [-p] [-b type] [-d delim] [-f type] [-h type] [-i incr] [-l num]
+          [-n format] [-s sep] [-v startnum] [-w width] [file]
+sh-3.2# 
+sh-3.2# vi s8.sh
+sh-3.2# vi s4.sh
+sh-3.2# cat Book
+cat: Book: No such file or directory
+sh-3.2# cat book.txt
+sh-3.2# ls
+.DS_Store		book.txt		s7.sh
+.localized		s4.sh			s8.sh
+Cover letter.pages	s5.sh			sample
+boo.txt			s6.sh
+sh-3.2# vi book.txt
+sh-3.2# vi s5.sh
+sh-3.2# vi s6.sh
+sh-3.2# vi s8.sh
+sh-3.2# vi s7.sh
+Final
+
+
+
+echo -e "add, list,find, delete, exit:"
+
+read answer
+
+if ["$answer" = "add"]
+then
+   ./s4.sh
+
+elif [ "$answer" = "list"]
+then
+   ./s8.sh
+
+elif [ "$answer"=  "find"]
+then
+    ./s6.sh
+
+elif ["$answer"= "delete"]
+then
+    ./s7.sh
+
+elif [ "$answer" ="exit"]
+
+then
+-- INSERT --
