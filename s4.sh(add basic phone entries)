@@ -1,0 +1,20 @@
+# !/bin/bash
+  
+Book="book.txt"
+
+echo -n “Enter name”:
+read name
+echo  -n “Enter Phone Number”:
+read phone
+
+echo -e $name, $phone
+echo -n “y/n:  “
+read answer
+
+if [ “$answer” == “y”]
+then
+echo “$name; $phone”>>$Book
+else
+echo “We are not writing to book”
+fi
+exit 0
