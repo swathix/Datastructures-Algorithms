@@ -12,6 +12,7 @@ q) select avg(sal) from dbo.emp
 
 r)  select max(sal) from dbo.emp where job=Salesman
 o)   select count(mgr) from dbo.emp
+m) select ename from  dbo.emp where depto not in (30, 40,10)
 
 n) select count(empno) from dbo.emp
 
