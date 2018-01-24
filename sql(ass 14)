@@ -1,0 +1,27 @@
+
+a)select count(empno) , avg(sal) from dbo.emp where deptno=20
+
+b) select ename, sal , 10*(sal)/100 from dbo.emp 
+
+ c) select ename from dbo.emp where 
+
+ d)select * from dbo.emp order by sal asc
+ 
+ e) select ename, hiredate from dbo.emp order by hiredate desc
+ 
+ f) select ename, sal, 10*(sal)/100, 50*(sal)/100, 30*(sal)/100 from dbo.emp
+ 
+g)select deptno, count(empno) from dbo.emp group by deptno
+
+h) select deptno, count(sal) from dbo.emp group by deptno
+
+i) select job , count(empno) from dbo.emp  order by job desc
+
+j) select sum(sal), max(sal), min(sal), avg(sal) from  dbo.emp group by job
+
+k) select sum(sal), max(sal), min(sal) , avg(sal) from dbo.emp where deptno=20
+
+select deptno, count(empno)   from dbo.emp group by deptno
+
+
+select  avg(sal) from dbo.emp where deptno =20 and avg(sal)>1000
