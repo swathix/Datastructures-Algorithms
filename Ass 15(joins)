@@ -1,0 +1,24 @@
+a) select t.trainername, c.coursename from dbo.Trainer as t inner join dbo.feed as f on t.TrainerID=f.TrainerID 
+         inner join dbo.Coursedetails as c on f.CourseID= c.CourseID
+         
+ b) select t.trainername from dbo.Trainer as t inner join dbo.feed as f on t.TrainerID=f.TrainerID where  t.TrainerID >1
+ 
+ c) select t.TrainerID, t.TrainerName distinct c.CourseName from dbo.Trainer t inner join dbo.feed f on t.TrainerID=f.TrainerID
+   inner join dbo.Coursedetails c on f.CourseID =c.CourseID
+   
+ d) select t.TrainerID , t.TrainerName, c.CourseName from dbo.Trainer t inner join dbo.feed f on t.TrainerID= f.TrainerID
+           inner join dbo.Coursedetails c on f.CourseID=c.CourseID
+           
+  e)  select b.Start_date, b.End_date , (b.Start_date-b.End_date) as difference from dbo.Batch_Schedule as b 
+  
+  f)  select t.TrainerID, t.TrainerName, t.EmaildID, t.phone, c.CourseID, c.CourseName from dbo.Trainer t inner join dbo.feed f on t.TrainerID=f.TrainerID
+              inner join dbo.Coursedetails c on f.CourseID=c.CourseID
+              
+   g) select t.TrainerID, b.batchname from dbo.Trainer t inner join dbo.feed  f on t.TrainerID=f.TrainerID
+              inner join dbo.Batch_Schedule b on f.CourseID=b.CourseID 
+              
+              
+   h) select t.TrainerName from dbo.Trainer t inner join dbo.feed f on t.TrainerID=f.TrainerID where t.TrainerID>1                     
+           
+   
+    
