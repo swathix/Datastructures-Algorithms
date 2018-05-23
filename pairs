@@ -1,0 +1,82 @@
+package sample;
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+public class amazon
+{
+    public static void main(String[] args)
+    {
+        String[][] input = {
+                {"ITO", "KOA"}, {"ANC", "SEA"}, {"LGA", "CDG"}, {"KOA", "LGA"}, {"PDX", "ITO"}, {"SEA", "PDX"}
+        };
+
+        printPairs(input);
+
+        sortPairs(input);
+
+        printPairs(input);
+    }
+
+    private static void sortPairs(String[][] input)
+    {
+        // Loop 1 - find first of Loop3's invariants:  input[ 0 ] = ( open, connected )
+        for (int i = 0; i < input.length; i++) {
+            int j = 1;
+            for (; j < input.length; j++) {
+                if (input[i][0].equals(input[j][1])) {
+                    break;
+                }
+            }
+            if (j == input.length) {
+                swapPairs(i, 0, input);
+                break;
+            }
+        }
+
+        // Loop 2 - find second of Loop3's invariants:  input[ N - 1 ] = ( connected, open )
+        for (int i = 0; i < input.length; i++) {
+            int j = 1;
+            for (; j < input.length; j++) {
+                if (input[i][1].equals(input[j][0])) {
+                    break;
+                }
+            }
+            if (j == input.length) {
+                swapPairs(i, input.length - 1, input);
+                break;
+            }
+        }
+
+        // Loop 3 - invariants input[ 0 ] = ( open, connected ]
+        //                     input[ N - 1 ] = [ connected,  open )
+        for (int i = 2; i < input.length - 1; i++) {
+            int j = i - 1;
+            for (; j >= 0; j--) {
+                if (input[j + 1][0].equals(input[j][1])) {
+                    break;
+                }
+                swapPairs(j, j + 1, input);
+                if (input[j + 1][0].equals(input[j][1])) {
+                    break;
+                }
+            }
+
+        }
+    }
+
+    private static void swapPairs(int i, int j, String[][] pairs)
+    {
+        String[] temp = pairs[i];
+        pairs[i] = pairs[j];
+        pairs[j] = temp;
+    }
+
+    private static void printPairs(String[][] input)
+    {
+        for (String[] pair : input) {
+            System.out.print(Arrays.stream(pair).collect(Collectors.joining(",", "(", ")")));
+        }
+
+        System.out.println();
+    }
+}
